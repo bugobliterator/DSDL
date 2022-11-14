@@ -27,7 +27,7 @@
 # announcement of its own capabilities should not have the
 # authoritative flag set.
 
-# the central server may have a (possibibly configurable) delay
+# the central server may have a (possibly configurable) delay
 # between when an increase in minimum network capability happens and
 # when it announces the upgraded capability. A delay on startup is a
 # good idea to allow time for legacy nodes to startup
@@ -36,9 +36,11 @@ uint32 FLAG_AUTHORITATIVE         = 1
 # the PUBLISHER_ONLY bit should be set if this node only publishes data, most sensor
 # nodes should set this bit
 uint32 FLAG_PUBLISHER_ONLY        = 2
-uint32 FLAG_FDCAN_4M_SUPPORT      = 4
-uint32 FLAG_FDCAN_8M_SUPPORT      = 8
-uint32 FLAG_TAO_DISABLE_SUPPORT   = 16
+uint32 FLAG_FDCAN_2M_SUPPORT      = 4
+uint32 FLAG_FDCAN_4M_SUPPORT      = 8
+uint32 FLAG_FDCAN_5M_SUPPORT      = 16
+uint32 FLAG_FDCAN_8M_SUPPORT      = 32
+uint32 FLAG_TAO_DISABLE_SUPPORT   = 64
 uint32 flags
 
 # the dronecan_messaging_level and dronecan_publisher_messaging_level
@@ -55,5 +57,5 @@ uint32 flags
 uint16 DRONECAN_LEVEL_LEGACY      = 0
 uint16 DRONECAN_LEVEL_LEVEL1      = 1
 
-uint16 dronecan_messaging_level
+uint16 dronecan_subscriber_messaging_level
 uint16 dronecan_publisher_messaging_level
