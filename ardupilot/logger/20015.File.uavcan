@@ -1,0 +1,4 @@
+# allow sending file to be logged into ardupilot logfile
+uint8[<=13] filename
+uint8[<=64] data
+uint32 offset
